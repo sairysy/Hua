@@ -155,15 +155,15 @@ public class Empresa {
           obj=null;
           while (rs.next()) {
               obj= new Empresa();
-              obj.setIdempresa(rs.getInt("pempresaid"));
+              obj.setIdempresa(rs.getInt("pidempresa"));
               Ciudad ciudad=new Ciudad();
               Ciudad ciudades=ciudad.ciudad_buscarporid(rs.getInt("pidciudad"));
               obj.setCiudad(ciudades);
               obj.setDireccion1(rs.getString("pdireccion1"));
               obj.setDireccion1(rs.getString("pdireccion2"));
-              obj.setDireccion1(rs.getString("estado"));
-              obj.setDireccion1(rs.getString("sitioweb"));
-              obj.setDireccion1(rs.getString("email"));
+              obj.setDireccion1(rs.getString("pestado"));
+              obj.setDireccion1(rs.getString("psitioweb"));
+              obj.setDireccion1(rs.getString("pemail"));
               obj.setDireccion1(rs.getString("ptelefono"));
            
               lista.add(obj);
@@ -208,7 +208,7 @@ public class Empresa {
               obj= new Empresa();
               obj.setIdempresa(rs.getInt("pidempresa"));
               Ciudad ciudad=new Ciudad();
-              Ciudad ciudades=ciudad.ciudad_buscarporid(rs.getInt("pcategoriaid"));
+              Ciudad ciudades=ciudad.ciudad_buscarporid(rs.getInt("pidciudad"));
               obj.setCiudad(ciudades);
               obj.setDireccion1(rs.getString("pdireccion1"));
               obj.setDireccion2(rs.getString("pdireccion2"));
